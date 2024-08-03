@@ -26,7 +26,7 @@ const App = () => {
   return (
     <section>
       <header>
-        <h1>Daniel Ospina</h1>
+        <h1>Daniel <br /> Ospina</h1>
         <h2> 
           Model & Dancer<br /> Daniospinajc@gmail.com
         </h2>

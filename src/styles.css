@@ -8,6 +8,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: 'poppins', sans-serif;
+  overflow: hidden;
 }
 
 section {
@@ -15,7 +16,6 @@ section {
   height: 100vh;
   justify-content: space-between;
 }
-
 
 h1 {
   font-size: 10vw;
@@ -32,30 +32,52 @@ h2 {
   font-weight: 500;
 }
 
-
 figure {
   background: #fff;
   margin: 0;
   position: relative;
-  width: 80vw;
+  width: 50vw;
 }
 
 figcaption {
   font-size: 36px;
   font-weight: normal;
-  position: fixed;
+  position: absolute;
   text-align: center;
   z-index: 1;
   bottom: 0;
   color: #fff;
-  margin: 0 auto;
-  width: 50%;
+  width: 100%;
   padding: 20px 0;
 }
 
 img {
   height: 100vh;
   object-fit: cover;
-  position: fixed;
-  width: 50%;
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  section {
+    flex-direction: column;
+  }
+
+  figure {
+    flex-grow: 1;
+    width: 100vw;
+  }
+
+  figcaption {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
 }
