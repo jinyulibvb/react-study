@@ -10,18 +10,12 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
-.App {
+section {
   display: flex;
   height: 100vh;
   justify-content: space-between;
 }
 
-.image-container {
-  background: #fff;
-  margin: 0;
-  position: relative;
-  width: 50vw;
-}
 
 h1 {
   font-size: 10vw;
@@ -35,5 +29,33 @@ h2 {
   font-size: 24px;
   line-height: 1.2;
   margin: 0 20px 20px 20px;
-  font-weight: medium;
+  font-weight: 500;
+}
+
+
+figure {
+  background: #fff;
+  margin: 0;
+  position: relative;
+  width: 80vw;
+}
+
+figcaption {
+  font-size: 36px;
+  font-weight: normal;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+  color: #fff;
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px 0;
+}
+
+img {
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  width: 50%;
 }

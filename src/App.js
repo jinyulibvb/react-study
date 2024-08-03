@@ -1,20 +1,44 @@
 import './styles.css'
-import React from 'react'
+import React, {useState} from 'react'
+
+import bed from './assets/bed.jpeg'
+import black from './assets/black.jpeg'
+import nude from './assets/nude.jpeg'
+import window from './assets/window.jpeg'
+import picnic from './assets/picnic.jpeg'
+import purple from './assets/purple.jpeg'
+
+
+const images = [bed, nude, picnic, purple, black, window]
 
 const App = () => {
-  return (
-    <div className="App">
-      <div className="title">
-        <h1>Zesty</h1>
-        <h2> 
-          A photography project <br /> by Ella Fieldling
-        </h2>
-      </div>
+  const [currentImage, setCurrentImage] = useState(0)
 
-      <div className="image-container">
-        <img alt="" src="" />
-      </div>
-    </div>
+  const handelClick = () => {
+    const length = images.length - 1
+
+    setCurrentImage((currentImage) => {
+       return currentImage < length ? currentImage + 1 : 0
+      })
+  }
+
+  console.log(currentImage)
+  return (
+    <section>
+      <header>
+        <h1>Daniel Ospina</h1>
+        <h2> 
+          Model & Dancer<br /> Daniospinajc@gmail.com
+        </h2>
+      </header>
+
+      <figure>
+        <img alt="" src={images[currentImage]} onClick={handelClick} />
+        <figcaption> 
+          {currentImage + 1} / {images.length} 
+          </figcaption>
+      </figure>
+    </section>
   )
 }
 
